@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "166950847243",
+    "project_id": "tech-care-test",
+    "storage_bucket": "tech-care-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:166950847243:android:fd16defb63de043c11180e",
+        "android_client_info": {
+          "package_name": "com.example.test2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBR-FMEaBdU4s5lU2hjHxJPHtLh3r8HIKU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
