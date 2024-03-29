@@ -1,18 +1,14 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:test2/features/user_authentication/domain/entities/user_entity.dart';
 
 class UserModel extends UserEntity {
-  const UserModel(
-      {required int id,
-      String? name,
-      required String email,
-      required String password,
-      int? pin})
-      : super(id: id, email: email, password: password, pin: pin);
+  const UserModel({
+    required int id,
+    String? email,
+  }) : super(id: id, email: email);
 
-  factory UserModel.fromJson(Map<String, dynamic> json) => UserModel(
-      id: json['id'],
-      name: json['name'],
-      email: json['email'],
-      password: json['password'],
-      pin: json['pin']);
+  factory UserModel.fromFirebase(User user) => UserModel(
+        id: int.parse(user.uid),
+        email: user.email,
+      );
 }

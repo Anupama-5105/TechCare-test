@@ -12,21 +12,17 @@ class RegisterUser implements UseCase<UserEntity, Params> {
 
   @override
   Future<Either<Failure, UserEntity>> call(Params params) async {
-    return await repository.registerUser(
-        params.name, params.email, params.password);
+    return await repository.registerUser(params.email, params.password);
   }
 }
 
 class Params extends Equatable {
-  final String name;
   final String email;
   final String password;
 
-  const Params(
-      {required this.name, required this.email, required this.password});
+  const Params({required this.email, required this.password});
   @override
   List<Object?> get props => [
-        name,
         email,
         password,
       ];
